@@ -1,0 +1,14 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /processing_data/infra/lvjiahui/LLaMA-Factory/saves/Llama-3-70B-Instruct/full/sft
+adapter_name_or_path: /processing_data/infra/lvjiahui/70b/dpo/checkpoint-500
+template: llama3
+finetuning_type: lora
+trust_remote_code: true
+
+### export
+export_dir: /processing_data/infra/lvjiahui/LLaMA-Factory/saves/Llama-3-70B-Instruct/full/dpo
+export_size: 10
+export_device: cpu
+export_legacy_format: false
